@@ -1,0 +1,13 @@
+<h2><%= @product.name %></h2>
+<main>
+  <%= form_for :cart, url: add_item_path do |f| %>
+    <%= hidden_field_tag :product_id, @product.id %>
+    <div class="form-group">
+      <%= f.label :quantity, '数量' %>
+      <%= f.select :quantity, [*1..10] %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "#{@product.name}をカートに入れる", class: 'btn btn-outline-success' %>
+    </div>
+  <% end %>
+</main>

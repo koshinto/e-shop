@@ -1,0 +1,6 @@
+<% @products.each do |product| %>
+  <ul>
+    <li><%= link_to product.name, :id => product.id, :controller => 'static_pages', :action => 'show' %></li>
+    <li><%= product.price %></li>
+  </ul>
+<% end %>
