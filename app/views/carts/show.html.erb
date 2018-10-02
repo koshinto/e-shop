@@ -1,9 +1,5 @@
 <h1 class="mt-3">カート</h1>
-<% if @cart_items.count >= 1 %>
-  <p>カートに<%= @cart_items.count %>つの商品が入っています。</p>
-<% else %>
-   <p>カートに商品は入っていません</p>
-<% end %>
+<p><%= @cart_items.status %></p>
 <ul class="list-group mt-2">
   <% @cart_items.each do |cart_item| %>
   <li class="list-group-item mb-1">
@@ -23,3 +19,4 @@
   </li>
   <% end %>
 </ul>
+<%= link_to "←商品一覧ページへ戻る", index_path %>

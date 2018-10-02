@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
   before_action :setup_cart_item!,   only: [:add_item, :update_item, :delete_item]
-  before_action :is_this_your_cart?, only: :show
+  before_action :is_this_yours_cart?, only: :show
 
   def show
     @cart_items = current_cart.cart_items
@@ -32,7 +32,7 @@ class CartsController < ApplicationController
     @cart_item = current_cart.cart_items.find_by(product_id: params[:product_id])
   end
 
-  def is_this_your_cart?
+  def is_this_yours_cart?
     redirect_to cart_path(current_cart.id) unless request.url == cart_url(current_cart.id)
   end
 end

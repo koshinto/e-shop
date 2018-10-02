@@ -15,3 +15,6 @@
 ## Detabese  
 * Sqlite3     (development)  
 * PostgreSQL  (production)
+
+## Testing
+* Rspec 3.6.0
