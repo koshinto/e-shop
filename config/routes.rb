@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get     '/index',       to: 'static_pages#index'
   get     '/products/detail/:id',    to: 'static_pages#show'
   devise_for :users
+  get     '/user',  to: 'users#show'
+  get     '/users/edit',  to: 'users#edit'
+  patch   '/users/:id',   to: 'users#update'
   resources :products   # only for Administrator
   resources :carts,       only: :show
   post    '/add_item',    to: 'carts#add_item'

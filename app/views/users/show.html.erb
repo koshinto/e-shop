@@ -1,0 +1,22 @@
+<h1>Show</h1>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Eメール</div>
+  <div class="panel-body">
+    <%= @user.email %>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">姓</div>
+  <div class="panel-body">
+    <%= @user.last_name %>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">名</div>
+  <div class="panel-body">
+    <%= @user.first_name %>
+  </div>
+</div>
+
+<%= link_to "Edit", edit_user_registration_path %>

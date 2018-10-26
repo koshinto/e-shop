@@ -19,4 +19,10 @@
   </li>
   <% end %>
 </ul>
-<%= link_to "←商品一覧ページへ戻る", index_path %>
+
+<div class="page-navigation mt-2">
+  <%= link_to "レジに進む", "#", class: "btn btn-primary" %>
+  <nav>
+    <%= link_to "←商品一覧ページへ戻る", index_path, class: "btn mt-2" %>
+  </nav>
+</div>
